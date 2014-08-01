@@ -250,12 +250,17 @@
             </div>
             <div class="header_right">
                 <div class="top">
-
+			<c:if test="${!empty user}">
+			<ul>
+			<li>Welcome, ${user.email}</li></ul>
+			<c:if test = "${user.email == 'guest@guest.com'}">
                     <ul>
                         <li><a href="#"  id="register">Register</a></li>
                         <li>|</li>
                         <li><a href="#" id="signin">Sign in</a></li>
                     </ul>
+                    </c:if>
+                    </c:if>
                 </div>
                 <div class="bottom">
                     <input type="button" id="signin2" value="ADD PROPERTY"></input>

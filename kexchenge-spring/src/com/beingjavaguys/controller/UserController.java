@@ -6,6 +6,7 @@ import java.util.Locale;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,31 +30,50 @@ public class UserController {
 	public ModelAndView login(Locale locale,HttpServletRequest hsr) {
 		Map<String, Object> model = new HashMap<String, Object>();
 		Map<String, String> map=new HashMap<String, String>();
+	
 		String name = hsr.getParameter("login_username");
 		
 		
 		String paasword = hsr.getParameter("login_password");
 		System.out.println("controler value---------"+name+"-----------"+paasword);
-		Users ur = userService.authenticate(name);
-		
-		if(ur == null)
+		Users Users = userService.authenticate(name);
+		String error="";
+		if(Users == null)
 		{
-			model.put("error", "invalid user name");
+			error="invalid user name";
+			model.put("error", error);
 			return new ModelAndView("index", model);
 		}
-		else if  (!ur.getPassword().equals(paasword)) 			
+		else if  (!Users.getPassword().equals(paasword)) 			
 			{
-				model.put("error", "wrong password");
+				error="Wrong Password";
+				model.put("error",error);
 				return new ModelAndView("index", model);
 			}
+		//successfull login case
 		else{
-			return new ModelAndView("redirect:/propertyList.html", model);
+			HttpSession ses = hsr.getSession();
+			ses.setAttribute("user", Users);
 			
+			return new ModelAndView("redirect:/propertyList.html", model);			
 		}
 		//map.put("count", count+"");
 	//	model.put("Property", userService.getUser(map));
 		
 
+	}
+	
+	@RequestMapping(value = "/GuestLogin" , method = RequestMethod.POST)
+	public ModelAndView guestlogin(Locale locale,HttpServletRequest hsr) {
+		Map<String, Object> model = new HashMap<String, Object>();
+		Map<String, String> map=new HashMap<String, String>();
+		Users Users=new Users();
+		
+		Users.setEmail("guest@guest.com");
+		HttpSession ses = hsr.getSession();
+		ses.setAttribute("user", Users);
+		
+		return new ModelAndView("redirect:/propertyList.html", model);	
 	}
 
 }

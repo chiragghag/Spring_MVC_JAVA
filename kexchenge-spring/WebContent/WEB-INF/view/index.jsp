@@ -28,8 +28,8 @@
 
 function codeAddress() {
 	$('#blanket').css("display","block");
-    var height = $('body').height();
-    $('#blanket').css("height",height);
+	 var height = $('body').height();
+	    $('#blanket').css("height",height);
 	$('#popUpDiv').fadeIn();
 }
  
@@ -100,7 +100,13 @@ function codeAddress() {
             </div>
             <div id="loading" style="display:none;"></div>
             <form action="Login.html" method="post" id="loginForm" >
-                <div class="error-show1">&nbsp;</div>
+                <div class="error-show1">&nbsp;
+                <c:if test="${!empty error}">
+                <font color="red">
+                ${error}
+                </font>                
+                </c:if>
+                </div>
                 <div class="sp_text">
                     <input type="text" id="login_username" name="login_username" title="Enter email/mobile no" placeholder="E-mail / Mobile No" class="sp_text1" />
                 </div>
@@ -111,13 +117,19 @@ function codeAddress() {
                     <input type="checkbox" class="sp_text2" /> Remember Password
                 </div>
                 <div class="sp_text">
-                    <label id="register_from_login"><a href="#">Register Now</a></label> | <label id="forgot_from_login"><a href="#">Forget your password?</a></label>
-                </div>
+                    <a href="#">Register Now</a> | <a href="#">Forget your password</a>
+                </div>                
                 <div class="sp_text">
-                    <input type="submit" id="submit-link" value="LOGIN" class="sp_button" />
+                    <input type="submit" id="submit-link" value="LOGIN" class="sp_button" name="login"/>
                 </div>
+                  </form>
+                <form action="GuestLogin.html" method="post" id="GuestloginForm" >
+                 <div class="sp_text">
+                    <input type="submit" id="submit-link" value="GUEST LOGIN" class="sp_button" name="guest"/>
+                </div>
+                </form>
                  
-            </form>
+          
 
         </div>
     </div>
