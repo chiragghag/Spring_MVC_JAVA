@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.beingjavaguys.domain.Property;
+import com.beingjavaguys.domain.UserDetails;
 import com.beingjavaguys.domain.Users;
 
 
@@ -66,6 +67,25 @@ public class UserDaoImpl implements UserDao {
 		criteria.add(Restrictions.eq("email", name));
 		
 		List<Users> list=criteria.list();
+		
+		if(list.size() !=0)
+		{
+			return list.get(0);
+		}
+		
+		else
+		return null;
+	}
+
+	@Override
+	public UserDetails getuserdetails(int uid) {
+		// TODO Auto-generated method stub
+		
+		Criteria criteria = sessionfactory.getCurrentSession()
+				.createCriteria(UserDetails.class);
+		
+		criteria.add(Restrictions.eq("uid", uid));
+		List<UserDetails> list=criteria.list();
 		
 		if(list.size() !=0)
 		{

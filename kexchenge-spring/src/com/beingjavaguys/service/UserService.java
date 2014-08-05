@@ -15,4 +15,6 @@ public interface UserService {
 	public Integer getTotal_results();
 
 	public Users authenticate(String name);
+
+	public com.beingjavaguys.domain.UserDetails getuserdetails(int uid);
 }

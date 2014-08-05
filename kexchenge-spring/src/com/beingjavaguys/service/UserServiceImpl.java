@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.beingjavaguys.dao.UserDao;
 import com.beingjavaguys.dao.HomeDao;
 import com.beingjavaguys.domain.Property;
+import com.beingjavaguys.domain.UserDetails;
 import com.beingjavaguys.domain.Users;
 
 
@@ -56,6 +57,12 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		Users ur = userDao.authenticate(name);
 		return ur;
+	}
+
+	@Override
+	public UserDetails getuserdetails(int uid) {
+		// TODO Auto-generated method stub
+		return userDao.getuserdetails(uid);
 	}
 
 }

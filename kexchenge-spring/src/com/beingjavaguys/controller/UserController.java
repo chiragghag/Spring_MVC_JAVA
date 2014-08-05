@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.beingjavaguys.domain.UserDetails;
 import com.beingjavaguys.domain.Users;
 import com.beingjavaguys.service.UserService;
 
@@ -37,6 +38,8 @@ public class UserController {
 		String paasword = hsr.getParameter("login_password");
 		System.out.println("controler value---------"+name+"-----------"+paasword);
 		Users Users = userService.authenticate(name);
+	
+		
 		String error="";
 		if(Users == null)
 		{
@@ -54,7 +57,8 @@ public class UserController {
 		else{
 			HttpSession ses = hsr.getSession();
 			ses.setAttribute("user", Users);
-			
+			UserDetails UserDetails = userService.getuserdetails(Users.getUid()); 
+			ses.setAttribute("UserDetails", UserDetails);
 			return new ModelAndView("redirect:/propertyList.html", model);			
 		}
 		//map.put("count", count+"");
