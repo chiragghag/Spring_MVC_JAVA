@@ -234,6 +234,181 @@
 
 </div>
 
+<!--addprop -->
+
+
+    <div id="popUpDivadd" style="display:none;">
+    	<a href="#" onclick="popup('popUpDiv')" class="pd1"><img src="images/close.png"></a>
+    	<div class="add_p_p">
+    		<h1>ADD PROPERTY</h1>
+    		<div class="add_p_row">
+    			<div class="ad_left">
+    				<div class="add_p_row">
+	    				<div class="left"><input type="radio" name="choice">Sell</div>
+	    				<div class="left"><input type="radio" name="choice">Rent</div>
+	    			</div>
+	    			<div class="add_p_row">
+	    				<label>Residential Commercial</label>
+	    				<select>
+	    					<option></option>
+	    				</select>
+	    			</div>
+	    			<div class="add_p_row">
+	    				<label>Town*</label>
+	    				<select>
+	    					<option></option>
+	    				</select>
+	    			</div>
+	    			<div class="add_p_row">
+	    				<label>City*</label>
+	    				<select>
+	    					<option></option>
+	    				</select>
+	    			</div>
+	    			<div class="add_p_row">
+	    				<label>Location</label>
+	    				<select>
+	    					<option></option>
+	    				</select>
+	    			</div>
+	    			<div class="add_p_row">
+	    				<label>Property Type</label>
+	    				<select>
+	    					<option></option>
+	    				</select>
+	    			</div>
+	    			<div class="add_p_row">
+	    				<label>Direct or Slide by Slide</label>
+	    				<input type="text">
+	    			</div>
+	    			<div class="add_p_row">
+	    				<label>Property address &nbsp;&nbsp;&nbsp;&nbsp;60 characters</label>
+	    				<textarea></textarea>
+	    			</div>
+
+	    			<div class="add_p_row">
+	    				<div class="sf_left">
+	    					<label>Area in sq. fi.</label>
+	    					<input type="text">
+	    				</div>
+	    				<div class="sf_left">
+	    					<label>Floor</label>
+	    					<input type="text">
+	    				</div>
+	    			</div>
+	    			<div class="add_p_row">
+	    				<div class="sf_left">
+	    					<label>Cost</label>
+	    					<input type="text">
+	    				</div>
+	    				<div class="sf_left">
+	    					<label>@Rate</label>
+	    					<input type="text">
+	    				</div>
+	    			</div>
+	    			<div class="add_p_row">
+	    				<label>Area</label>
+	    				<input type="text">
+	    			</div>
+	    			<div class="add_p_row">
+	    				<select class="slect_last">
+	    					<option>SB-Super Build up</option>
+	    					<option>BU-Build up</option>
+	    					<option>C-Carpet</option>
+	    				</select>
+	    			</div>
+	    			<div class="add_p_row">
+	    				<input type="submit" value="SAVE" class="bt3">
+	    			</div>
+    			</div><!-- ad_left close -->
+    			<div class="ad_p_right">
+    				<div class="ad_p_p_right">
+    				
+    				
+			    			<div class="add_p_row">
+			    				<label>OPTIONAL INFO</label>
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">OC-Occupancu Certificate</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">Ter-Terrace____SF</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">OP-Open parking</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">SP-Stilt Parking</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">GF-Garden Facing</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">BF-Back facing</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">RF-Road Facing</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">FW-Full white</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">AV-Agreement Value _____</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">CM-Club Membership</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">Bal-Balcony</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">FF-Fully Furnished</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">SF-Semi Furnished</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">UC-Under Construction</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">HD-Heavy Deposit</label>
+
+			    			</div>
+			    			<div class="add_p_row">
+			    				<label><input type="checkbox">MB-Master Bed</label>
+
+			    			</div>
+			    		</div>
+	    			
+    			</div>
+    		</div>
+    	</div>
+    	<a id="link" onclick="popup('popUpDiv')">Add Property</a>
+    </div>  
+   
+
+
+
+
+
+
+
+
+
 
 <div class="grid_1">
     <div class="header">
@@ -263,7 +438,7 @@
                     </c:if>
                 </div>
                 <div class="bottom">
-                    <input type="button" id="signin2" value="ADD PROPERTY"></input>
+                    <input type="button" id="sig" value="ADD PROPERTY"></input>
                 </div>
             </div>
             <div class="header_bottom">

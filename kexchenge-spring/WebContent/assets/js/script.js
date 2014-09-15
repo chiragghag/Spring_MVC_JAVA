@@ -204,11 +204,11 @@
                   $('.error-show').html('');
                   $('#popUpDiv4').fadeOut(); // hide the overlay
               });
-               $('#signin2').click(function(){
-                $('#blanket').css("display","block");
+               $('#sig').click(function(){
+                $('#blanketadd').css("display","block");
                 var height = $('body').height();
-                $('#blanket').css("height",height);
-                $('#popUpDiv').fadeIn(); // hide the overlay
+                $('#blanketadd').css("height",height);
+                $('#popUpDivadd').fadeIn(); // hide the overlay
             });
                 $('#edit_profile').click(function(){
                 $('#blanket4').css("display","block");
