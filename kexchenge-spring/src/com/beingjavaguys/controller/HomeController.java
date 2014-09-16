@@ -93,12 +93,33 @@ public class HomeController {
 		System.out.println("inside ajax call");
 		
 		
-		
-		for (Property p: Property)
+	
+		for(int i=0; i<Property.size();i=i+2)
 		{
 			//System.out.println("list values ------------"+p.getCost());
 		
-		response=response + "<ul> 	<li>   <p> <font color=\"blue\"><b>RS-"+p.getCost()+"</b></font><br>	"+p.getType()+" | "+p.getLocality()+" | "+p.getArea()+" | "+p.getFloor()+" | "+p.getTown()+"</p>  </li>	</ul>";
+		response=response + 	""+
+		
+							"<tr class=\"split\">"+
+                               " <td align=\"center\"><input type=\"checkbox\"></td>"+
+                              "  <td>"+ "code" +"</td>"+
+                              "  <td>"+ Property.get(i).getCost() +"</td>"+
+                              "  <td><button class=\"bt2\">"+ Property.get(i).getRescom()+"</button></td>"+
+                              "  <td>"+ Property.get(i).getAddress()+"</td>"+
+                              "  <td> CONTACT </td>"+
+                            "</tr>";
+		if((i+1)<Property.size()){
+			
+			response=response + "<tr>"+
+                    " <td align=\"center\"><input type=\"checkbox\"></td>"+
+                   "  <td>"+ "code" +"</td>"+
+                   "  <td>"+ Property.get(i+1).getCost() +"</td>"+
+                   "  <td><button class=\"bt2\">"+ Property.get(i+1).getRescom()+"</button></td>"+
+                   "  <td>"+ Property.get(i+1).getAddress()+"</td>"+
+                   "  <td> CONTACT </td>"+
+                 "</tr>";
+		}
+		
 		}
 		//totalresult=userService.getTotal_results();
 		// request.setAttribute("listGood",listg);

@@ -417,8 +417,8 @@ a:hover {
 .mid_row .properties .container table th
 {
 	text-align: left;
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 16px;
+	line-height: 40px;
 	color: #000;
 }
 .mid_row .properties .container .bt1
@@ -443,7 +443,7 @@ a:hover {
 }
 .mid_row .properties .container table td
 {
-	font-size: 11px;
+	font-size: 13px;
 	font-weight: bold;
 	padding: 10px 0px;
 }

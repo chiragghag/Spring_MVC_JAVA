@@ -580,37 +580,70 @@
    
     </div><!-- mid row close -->
     <div class="mid_row">
-    
+           <div class="properties">
+                    <div class="title">
+                        <img src="assets/images/title_hh.png"> <span>Properties</span> <label>Sale/Rent</label>
+                    </div>
+ <div class="container">
+ <div id="postswrapper">
+	
+  <table width="100%">
+  
+                            <tr class="split">
+                                <th></th>
+                                <th>Code Data</th>
+                                <th>Price</th>
+                                <th>Property Type</th>
+                                <th>Address</th>
+                                <th>Contact</th>
+                            </tr>
+ 
+ 
 
-<div class="mid_row_notes">
-<div class="title">
-<h1>Property List</h1>
-</div>
- <div class="directory">
 <c:if test="${!empty Property}">
-	<div class="inbar">
-	<div id="postswrapper">
-	<ul>
 	
+	
+	
+	<c:set var="count" scope="page" value="${1}"/>
 	<c:forEach items="${Property}" var="Property">
+	<c:set var="count" value="${count + 1}" scope="page"/>
 	
-	<li>
-	<p> <font color="blue"><b>RS-<c:out value="${Property.cost}"/></b></font><br>
-	<c:out value="${Property.type}"/> | <c:out value="${Property.locality}"/> <c:out value="${Property.area}"/> | <c:out value="${Property.floor}"/> | <c:out value="${Property.town}"/></p>
-	</li>
-
-	
+	<c:if test="${count%2==0}">
+           <tr><a href="">
+           <td align="center"><input type="checkbox"></td>
+	<td>code</td>
+	<td>"${Property.cost}"</td>
+	<td>${Property.type}</td>
+	<td>${Property.area}</td>
+	<td>contact</td>
+	</a>
+	</tr>
+           </c:if>
+           
+   
+<c:if test="${count%2!=0}">
+           <tr class="split">
+            	<td align="center"><input type="checkbox"></td>
+	<td>code</td>
+	<td>"${Property.cost}"</td>
+	<td>${Property.type}</td>
+	<td>${Property.area}</td>
+	<td>contact</td>
+           </c:if>
+           
+  	
 	</c:forEach>
 		
-	</ul>
-	</div>
+	
 	<div id="loadmoreajaxloader" style="display:none;"><center><img src="assets/images/ajax-listloader.gif" /></center></div>
 	
 	
 	<div style="clear:both"></div>
-	</div>
+	
 	
 </c:if>
+
+</table>
 </div>
 </div>
 
