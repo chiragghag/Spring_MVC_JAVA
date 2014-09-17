@@ -236,35 +236,36 @@
 
 <!--addprop -->
 
-
+<div id="blanketadd" style="display:none;"></div>
     <div id="popUpDivadd" style="display:none;">
-    	<a href="#" onclick="popup('popUpDiv')" class="pd1"><img src="images/close.png"></a>
+      <img src="assets/images/close.png" class="close_box" id="close_addprop" />
     	<div class="add_p_p">
     		<h1>ADD PROPERTY</h1>
     		<div class="add_p_row">
     			<div class="ad_left">
     				<div class="add_p_row">
-	    				<div class="left"><input type="radio" name="choice">Sell</div>
-	    				<div class="left"><input type="radio" name="choice">Rent</div>
+	    				<div class="left"><input type="radio" name="sellrent">Sell</div>
+	    				<div class="left"><input type="radio" name="sellrent">Rent</div>
 	    			</div>
 	    			<div class="add_p_row">
-	    				<label>Residential Commercial</label>
-	    				<select>
-	    					<option></option>
-	    				</select>
+	    				<div class="left"><input type="radio" name="resscom">Residential</div>
+	    				<div class="left"><input type="radio" name="resscom">Commercial</div>
 	    			</div>
-	    			<div class="add_p_row">
-	    				<label>Town*</label>
-	    				<select>
-	    					<option></option>
-	    				</select>
-	    			</div>
+	    			
 	    			<div class="add_p_row">
 	    				<label>City*</label>
 	    				<select>
 	    					<option></option>
 	    				</select>
 	    			</div>
+	    			
+	    			<div class="add_p_row">
+	    				<label>Town*</label>
+	    				<select>
+	    					<option></option>
+	    				</select>
+	    			</div>
+	    			
 	    			<div class="add_p_row">
 	    				<label>Location</label>
 	    				<select>
@@ -277,10 +278,7 @@
 	    					<option></option>
 	    				</select>
 	    			</div>
-	    			<div class="add_p_row">
-	    				<label>Direct or Slide by Slide</label>
-	    				<input type="text">
-	    			</div>
+	    			
 	    			<div class="add_p_row">
 	    				<label>Property address &nbsp;&nbsp;&nbsp;&nbsp;60 characters</label>
 	    				<textarea></textarea>
@@ -316,6 +314,14 @@
 	    					<option>BU-Build up</option>
 	    					<option>C-Carpet</option>
 	    				</select>
+	    			</div><br><br>
+	    			<div class="add_p_row">
+	    			Brokerage -
+	    			</div>
+	    			
+	    			<div class="add_p_row">
+	    				<div class="left"><input type="radio" name="brokerage">Direct</div>
+	    				<div class="left"><input type="radio" name="brokerage">Side By Side</div>
 	    			</div>
 	    			<div class="add_p_row">
 	    				<input type="submit" value="SAVE" class="bt3">

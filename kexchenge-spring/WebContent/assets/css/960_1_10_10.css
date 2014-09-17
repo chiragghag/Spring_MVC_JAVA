@@ -16,7 +16,7 @@ a:hover {
 	background-color:#e9f0fa;
 	background-image: url(images/960_1_10_10.png);
 	background-repeat: repeat-y;
-	width: 1000px;
+	width: 100%;
 }
 .header
 {
@@ -433,7 +433,7 @@ a:hover {
 .mid_row .properties .container table th:first-child
 {
 	border-left: none;
-		border-bottom: 1px solid #3b5999;
+		border-bottom: none;
 		 font-weight: bold;
 	text-align: left;
 	font-size: 14px;
@@ -931,6 +931,31 @@ width: 100%;
 	background-color: #FFFFFF;
 	left: 25%;
 }
+
+#blanketadd {
+  background-color: #111;
+opacity: 0.65;
+position: absolute;
+z-index: 9001;
+top: 0px;
+left: 0px;
+width: 100%;
+}
+
+#popUpDivadd {
+    position: absolute;
+  background: #FFFFFF;
+  width: 84%;
+  min-height: 460px;
+  /* border: 2px solid rgba(240, 237, 237, 0.02); */
+  z-index: 9002;
+  border-radius: 18px;
+  padding: 15px 0px;
+  box-shadow: 0px 0px 30px #fff;
+  font-family: verdana;
+  top: 15%;
+  left: 8%;
+}
 .margin_31
 {
 	margin-top: 31px;
@@ -1183,9 +1208,9 @@ margin-top: 35px;
 }
 .add_p_row
 {
-    width: 97%;
+    width: 98%;
     float: left;
-    padding: 0px 3.6%;
+    padding: 0px 2%;
     line-height: 23px;
 }
 .add_p_row .ad_left
@@ -1279,7 +1304,7 @@ margin-top: 35px;
     font-size: 13px;
     line-height: 40px;
     padding-top: 6px;
-    margin-left: 5px;
+    margin-left: 0px;
 border: 1px solid #ccc;
 }
 .ad_p_p_right .bt1
@@ -1315,7 +1340,7 @@ border: 1px solid #ccc;
 .ad_p_right
 {
     width: 46%;
-    float: left;
+    float: right;
 }
 .add_p_row .ad_left  .slect_last
 {

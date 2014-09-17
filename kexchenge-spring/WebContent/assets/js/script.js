@@ -198,6 +198,15 @@
                   $('.error-show').html('');
                   $('#popUpDiv').fadeOut(); // hide the overlay
               });
+               
+               $('#close_addprop').click(function(){
+                   document.getElementById("loginForm").reset();
+                 $('#blanketadd').css("display","none");
+                 $('#blanketadd').removeAttr('height');
+                 $('.error-show').html('');
+                 $('#popUpDivadd').fadeOut(); // hide the overlay
+             });
+               
                 $('.close-btn04').click(function(){
                   $('#blanket4').css("display","none");
                   $('#blanket4').removeAttr('height');
