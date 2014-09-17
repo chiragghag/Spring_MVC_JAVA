@@ -106,7 +106,7 @@ public class HomeController {
                               "  <td>"+ Property.get(i).getCost() +"</td>"+
                               "  <td><button class=\"bt2\">"+ Property.get(i).getRescom()+"</button></td>"+
                               "  <td>"+ Property.get(i).getAddress()+"</td>"+
-                              "  <td> CONTACT </td>"+
+                              "  <td>contact</td>"+
                             "</tr>";
 		if((i+1)<Property.size()){
 			
@@ -117,7 +117,7 @@ public class HomeController {
                    "  <td>"+ Property.get(i+1).getCost() +"</td>"+
                    "  <td><button class=\"bt2\">"+ Property.get(i+1).getRescom()+"</button></td>"+
                    "  <td>"+ Property.get(i+1).getAddress()+"</td>"+
-                   "  <td> CONTACT </td>"+
+                   "  <td>contact</td>"+
                  "</tr>";
 		}
 		

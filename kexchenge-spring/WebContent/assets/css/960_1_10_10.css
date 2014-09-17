@@ -414,13 +414,60 @@ a:hover {
 	border: 1px solid #3b5999;
 	background: #fff;
 }
+
+
 .mid_row .properties .container table th
 {
 	text-align: left;
-	font-size: 16px;
+	border-bottom: 1px solid #3b5999;
+	 font-weight: bold;
+	font-size: 14px;
 	line-height: 40px;
 	color: #000;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-left: 1px solid #3b5999;
+	border-right: 1px solid #3b5999;
 }
+
+.mid_row .properties .container table th:first-child
+{
+	border-left: none;
+		border-bottom: 1px solid #3b5999;
+		 font-weight: bold;
+	text-align: left;
+	font-size: 14px;
+	line-height: 40px;
+	color: #000;
+	padding-left: 10px;
+	padding-right: 10px;
+	
+}
+
+.mid_row .properties .container table th:first-child + th {
+border-left: none;
+	border-bottom: 1px solid #3b5999;
+	text-align: left;
+	 font-weight: bold;
+	font-size: 14px;
+	line-height: 40px;
+	color: #000;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.mid_row .properties .container table th:last-child {
+border-right: none;
+	border-bottom: 1px solid #3b5999;
+	text-align: left;
+	 font-weight: bold;
+	font-size: 14px;
+	line-height: 40px;
+	color: #000;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 .mid_row .properties .container .bt1
 {
 	background: #468847;
@@ -446,7 +493,26 @@ a:hover {
 	font-size: 13px;
 	font-weight: bold;
 	padding: 10px 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-left: 1px solid #3b5999;
+	border-right: 1px solid #3b5999;
 }
+
+.mid_row .properties .container table td:first-child
+{
+	border-left: none;
+	
+}
+
+.mid_row .properties .container table td:first-child + td {
+border-left: none;
+}
+
+.mid_row .properties .container table td:last-child {
+border-right: none;
+}
+
 .mid_row .properties .container .split
 
 {

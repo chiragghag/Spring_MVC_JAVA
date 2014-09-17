@@ -613,7 +613,7 @@
            <tr><a href="">
            <td align="center"><input type="checkbox"></td>
 	<td>code</td>
-	<td>"${Property.cost}"</td>
+	<td>${Property.cost}</td>
 	<td><button class="bt1">${Property.rescom}</button></td>
 	<td>${Property.address}</td>
 	<td>contact</td>
@@ -626,7 +626,7 @@
            <tr class="split">
             	<td align="center"><input type="checkbox"></td>
 	<td>code</td>
-	<td>"${Property.cost}"</td>
+	<td>${Property.cost}</td>
 	<td><button class="bt1">${Property.rescom}</button></td>
 	<td>${Property.address}</td>
 	<td>contact</td>
