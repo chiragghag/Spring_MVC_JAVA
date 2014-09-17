@@ -44,7 +44,7 @@
 					url: 'propertyListajax.html',
 					success: function(html){
 						if(html){
-							$("#postswrapper").append(html);
+							$("#postswrapper").append(html).trigger("create");
 							$('div#loadmoreajaxloader').hide();
 							processing = false;
 						}else{
@@ -585,9 +585,10 @@
                         <img src="assets/images/title_hh.png"> <span>Properties</span> <label>Sale/Rent</label>
                     </div>
  <div class="container">
- <div id="postswrapper">
+
 	
-  <table width="100%">
+  <table width="100%" id="postswrapper">
+  <tbody>
   
                             <tr class="split">
                                 <th></th>
@@ -613,8 +614,8 @@
            <td align="center"><input type="checkbox"></td>
 	<td>code</td>
 	<td>"${Property.cost}"</td>
-	<td>${Property.type}</td>
-	<td>${Property.area}</td>
+	<td><button class="bt1">${Property.rescom}</button></td>
+	<td>${Property.address}</td>
 	<td>contact</td>
 	</a>
 	</tr>
@@ -626,8 +627,8 @@
             	<td align="center"><input type="checkbox"></td>
 	<td>code</td>
 	<td>"${Property.cost}"</td>
-	<td>${Property.type}</td>
-	<td>${Property.area}</td>
+	<td><button class="bt1">${Property.rescom}</button></td>
+	<td>${Property.address}</td>
 	<td>contact</td>
            </c:if>
            
@@ -642,9 +643,9 @@
 	
 	
 </c:if>
-
+</tbody>
 </table>
-</div>
+
 </div>
 
 

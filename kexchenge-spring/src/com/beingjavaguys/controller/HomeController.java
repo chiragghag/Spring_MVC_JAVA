@@ -98,9 +98,9 @@ public class HomeController {
 		{
 			//System.out.println("list values ------------"+p.getCost());
 		
-		response=response + 	""+
+		response=response + 	
 		
-							"<tr class=\"split\">"+
+							"<tr>"+
                                " <td align=\"center\"><input type=\"checkbox\"></td>"+
                               "  <td>"+ "code" +"</td>"+
                               "  <td>"+ Property.get(i).getCost() +"</td>"+
@@ -110,7 +110,8 @@ public class HomeController {
                             "</tr>";
 		if((i+1)<Property.size()){
 			
-			response=response + "<tr>"+
+			response=response +
+					"<tr  class=\"split\">"+
                     " <td align=\"center\"><input type=\"checkbox\"></td>"+
                    "  <td>"+ "code" +"</td>"+
                    "  <td>"+ Property.get(i+1).getCost() +"</td>"+
