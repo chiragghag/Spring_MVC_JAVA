@@ -56,6 +56,8 @@
 		    }
 		});
 	</script>
+	
+	
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -235,14 +237,20 @@
 </div>
 
 <!--addprop -->
-
+	<div id="loadmoreajaxloader1" style="display:none;"><center><img src="assets/images/ajax-listloader.gif" /></center></div>
 <div id="blanketadd" style="display:none;"></div>
     <div id="popUpDivadd" style="display:none;">
+    
+    		
+    			
       <img src="assets/images/close.png" class="close_box" id="close_addprop" />
     	<div class="add_p_p">
     		<h1>ADD PROPERTY</h1>
     		<div class="add_p_row">
     			<div class="ad_left">
+    		
+    			
+    			
     				<div class="add_p_row">
 	    				<div class="left"><input type="radio" name="sellrent">Sell</div>
 	    				<div class="left"><input type="radio" name="sellrent">Rent</div>
@@ -252,17 +260,25 @@
 	    				<div class="left"><input type="radio" name="resscom">Commercial</div>
 	    			</div>
 	    			
-	    			<div class="add_p_row">
+	    			<div class="add_p_row" >
 	    				<label>City*</label>
-	    				<select>
-	    					<option></option>
+	    				<select id="city" onchange="showTown(this.value)">
+	    				
+	    					<option>select</option>
+	    					
+	    					<c:if test="${!empty City}">
+	    					<c:forEach items="${City}" var="City">
+	    					<option>${City}</option>
+	    					</c:forEach>	    					
+	    					</c:if>
+	    				
 	    				</select>
 	    			</div>
 	    			
 	    			<div class="add_p_row">
 	    				<label>Town*</label>
-	    				<select>
-	    					<option></option>
+	    				<select id="postswrappertown">
+	    					<option>select</option>
 	    				</select>
 	    			</div>
 	    			

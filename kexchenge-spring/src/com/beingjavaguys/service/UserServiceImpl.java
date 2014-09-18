@@ -65,4 +65,11 @@ public class UserServiceImpl implements UserService {
 		return userDao.getuserdetails(uid);
 	}
 
+	@Override
+	public List<String> getcitylist() {
+		// TODO Auto-generated method stub
+		
+		return userDao.getcitylist();
+	}
+
 }

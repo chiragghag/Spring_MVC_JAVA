@@ -39,6 +39,8 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 				<value>com.beingjavaguys.domain.Property</value>
 				<value>com.beingjavaguys.domain.Users</value>
 				<value>com.beingjavaguys.domain.UserDetails</value>
+				<value>com.beingjavaguys.domain.City</value>
+				<value>com.beingjavaguys.domain.CityTown</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

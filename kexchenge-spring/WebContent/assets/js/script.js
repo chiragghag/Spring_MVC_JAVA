@@ -860,7 +860,29 @@ $('.loading3').css("display","block");
           });
           //selected owner
        
+           
         });
+    //town dropdown change
+    function showTown(str)
+	{
+    	$('div#loadmoreajaxloader1').show();
+		$("#postswrappertown").empty();
+ 	   $.ajax({
+			url: 'citychange.html',
+			data: {'value': str},
+			success: function(html){
+				if(html){
+					$("#postswrappertown").append(html).trigger("create");
+					$('div#loadmoreajaxloader1').hide();
+					processing = false;
+				}else{
+					$('div#loadmoreajaxloader1').html('<center>No more posts to show.</center>');
+					processing = false;
+				}
+			}
+		});
+	}
+    
        //Jquery
  function signup()
   {

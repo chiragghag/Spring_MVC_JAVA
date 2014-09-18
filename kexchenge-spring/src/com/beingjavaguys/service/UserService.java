@@ -17,4 +17,6 @@ public interface UserService {
 	public Users authenticate(String name);
 
 	public com.beingjavaguys.domain.UserDetails getuserdetails(int uid);
+
+	public List<String> getcitylist();
 }

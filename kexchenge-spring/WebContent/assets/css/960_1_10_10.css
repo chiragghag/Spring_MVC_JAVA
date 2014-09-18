@@ -956,6 +956,15 @@ width: 100%;
   top: 15%;
   left: 8%;
 }
+
+
+#loadmoreajaxloader1{
+	 top: 30%;
+  left: 48%;
+	position: absolute;
+}
+
+
 .margin_31
 {
 	margin-top: 31px;
@@ -1208,7 +1217,7 @@ margin-top: 35px;
 }
 .add_p_row
 {
-    width: 98%;
+    width: 96%;
     float: left;
     padding: 0px 2%;
     line-height: 23px;

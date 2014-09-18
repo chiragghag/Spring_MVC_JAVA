@@ -64,7 +64,7 @@ public class HomeController {
 		Map<String, String> map=new HashMap<String, String>();
 		map.put("count", count+"");
 		model.put("Property", userService.getUser(map));
-		
+		model.put("City",userService.getcitylist());
 		totalresult=userService.getTotal_results();
 		
 		return new ModelAndView("kexchange", model);
@@ -129,4 +129,12 @@ public class HomeController {
 		else
 			return response;
 	}
+	
+	@RequestMapping(value = "/citychange" , method = RequestMethod.GET)
+	   @ResponseBody
+	public String gettownlist(String value) {
+		System.out.println("inside city ajax"+value);
+		return "<option>test1</option><option>test2</option>";
+	}
+	
 }

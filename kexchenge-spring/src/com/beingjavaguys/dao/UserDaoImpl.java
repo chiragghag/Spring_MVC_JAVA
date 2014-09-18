@@ -1,5 +1,6 @@
 package com.beingjavaguys.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -10,6 +11,7 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.beingjavaguys.domain.City;
 import com.beingjavaguys.domain.Property;
 import com.beingjavaguys.domain.UserDetails;
 import com.beingjavaguys.domain.Users;
@@ -94,6 +96,22 @@ public class UserDaoImpl implements UserDao {
 		
 		else
 		return null;
+	}
+
+	@Override
+	public List<String> getcitylist() {
+		// TODO Auto-generated method stub
+		Criteria criteria = sessionfactory.getCurrentSession()
+				.createCriteria(City.class);
+		List<City> list=criteria.list();
+		List<String> citylist = new ArrayList<String>();
+		for(City c:list)
+		{
+			
+			citylist.add(c.getCity());
+		}
+		
+		return citylist;
 	}
 
 
