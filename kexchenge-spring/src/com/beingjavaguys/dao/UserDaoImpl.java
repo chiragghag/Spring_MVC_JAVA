@@ -12,7 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.beingjavaguys.domain.City;
+import com.beingjavaguys.domain.CityTown;
 import com.beingjavaguys.domain.Property;
+import com.beingjavaguys.domain.TownLocality;
 import com.beingjavaguys.domain.UserDetails;
 import com.beingjavaguys.domain.Users;
 
@@ -112,6 +114,41 @@ public class UserDaoImpl implements UserDao {
 		}
 		
 		return citylist;
+	}
+
+	@Override
+	public List<String> getTown(String value) {
+		// TODO Auto-generated method stub
+		
+		Criteria criteria = sessionfactory.getCurrentSession()
+				.createCriteria(CityTown.class);
+			criteria.add(Restrictions.like("city", value));
+		List<CityTown> list=criteria.list();
+		List<String> Town = new ArrayList<String>();
+		//System.out.println("*****"+list.get(4).getTown());
+		for(CityTown c: list){
+			Town.add(c.getTown());
+			//System.out.println("-------"+c.getTown());
+		}
+		return Town;
+	}
+
+	@Override
+	public List<String> getLocality(String value) {
+		// TODO Auto-generated method stub
+		
+
+		Criteria criteria = sessionfactory.getCurrentSession()
+				.createCriteria(TownLocality.class);
+			criteria.add(Restrictions.like("town", value));
+		List<TownLocality> list=criteria.list();
+		List<String> locality = new ArrayList<String>();
+		//System.out.println("*****"+list.get(4).getTown());
+		for(TownLocality c: list){
+			locality.add(c.getLocality());
+			//System.out.println("-------"+c.getTown());
+		}
+		return locality;
 	}
 
 

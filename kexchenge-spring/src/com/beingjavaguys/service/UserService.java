@@ -19,4 +19,8 @@ public interface UserService {
 	public com.beingjavaguys.domain.UserDetails getuserdetails(int uid);
 
 	public List<String> getcitylist();
+
+	public List<String> getTown(String value);
+
+	public List<String> getLocality(String value);
 }

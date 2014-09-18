@@ -72,4 +72,16 @@ public class UserServiceImpl implements UserService {
 		return userDao.getcitylist();
 	}
 
+	@Override
+	public List<String> getTown(String value) {
+		// TODO Auto-generated method stub
+		return userDao.getTown(value);
+	}
+
+	@Override
+	public List<String> getLocality(String value) {
+		// TODO Auto-generated method stub
+		return userDao.getLocality(value);
+	}
+
 }

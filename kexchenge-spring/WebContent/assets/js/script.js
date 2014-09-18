@@ -883,6 +883,28 @@ $('.loading3').css("display","block");
 		});
 	}
     
+    
+    //locality dropdown change
+    function showLocality(str)
+	{
+    	$('div#loadmoreajaxloader1').show();
+		$("#postswrapperlocality").empty();
+ 	   $.ajax({
+			url: 'townchange.html',
+			data: {'value': str},
+			success: function(html){
+				if(html){
+					$("#postswrapperlocality").append(html).trigger("create");
+					$('div#loadmoreajaxloader1').hide();
+					processing = false;
+				}else{
+					$('div#loadmoreajaxloader1').html('<center>No more posts to show.</center>');
+					processing = false;
+				}
+			}
+		});
+	}
+    
        //Jquery
  function signup()
   {

@@ -41,6 +41,7 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 				<value>com.beingjavaguys.domain.UserDetails</value>
 				<value>com.beingjavaguys.domain.City</value>
 				<value>com.beingjavaguys.domain.CityTown</value>
+				<value>com.beingjavaguys.domain.TownLocality</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

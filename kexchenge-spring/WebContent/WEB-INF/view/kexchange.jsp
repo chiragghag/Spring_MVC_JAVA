@@ -277,15 +277,15 @@
 	    			
 	    			<div class="add_p_row">
 	    				<label>Town*</label>
-	    				<select id="postswrappertown">
+	    				<select id="postswrappertown" onchange="showLocality(this.value)">
 	    					<option>select</option>
 	    				</select>
 	    			</div>
 	    			
 	    			<div class="add_p_row">
 	    				<label>Location</label>
-	    				<select>
-	    					<option></option>
+	    				<select id="postswrapperlocality">
+	    					<option>select</option>
 	    				</select>
 	    			</div>
 	    			<div class="add_p_row">

@@ -134,7 +134,31 @@ public class HomeController {
 	   @ResponseBody
 	public String gettownlist(String value) {
 		System.out.println("inside city ajax"+value);
-		return "<option>test1</option><option>test2</option>";
+		
+		List<String> Town= userService.getTown(value);
+		String townlist="<option>SELECT</option>";
+		
+		for(String town:Town)
+		{
+			townlist=townlist+"<option>"+town+"</option>";
+		}
+		return townlist;
+	}
+	
+	
+	@RequestMapping(value = "/townchange" , method = RequestMethod.GET)
+	   @ResponseBody
+	public String getlocalitylist(String value) {
+		System.out.println("inside town ajax"+value);
+		
+		List<String> Town= userService.getLocality(value);
+		String localitylist="<option>SELECT</option>";
+		
+		for(String locality:Town)
+		{
+			localitylist=localitylist+"<option>"+locality+"</option>";
+		}
+		return localitylist;
 	}
 	
 }
